@@ -1,0 +1,16 @@
+@import "~bootswatch/dist/lux/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/lux/bootswatch";
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 80vh;
+    font-size: 1.6rem;
+}
+
+main {
+    min-height: 80vh;
+}
