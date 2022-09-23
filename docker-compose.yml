@@ -1,0 +1,11 @@
+version: '2'
+services:
+  web:
+    image: node:15.5.0
+    restart: always
+    build: .
+    command: yarn start
+    volumes:
+      - /volume1/docker/hitechverse-api:/var/lib/hitechverse-api
+    ports:
+      - "3002:3002"
