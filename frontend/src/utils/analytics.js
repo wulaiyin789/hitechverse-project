@@ -2,9 +2,9 @@ import ReactGA from 'react-ga4';
 
 export const initGA = () => {
     if(process.env.NODE_ENV !== 'development') {
-        ReactGA.initialize('G-C8J7ZNG6HT');
+        ReactGA.initialize('G-J6HHVPBDC2');
     } else {
-        ReactGA.initialize('G-C8J7ZNG6HT', { debug: true });
+        ReactGA.initialize('G-J6HHVPBDC2', { debug: true });
     }
     // console.log('GA initialised');
 };
