@@ -1,5 +1,5 @@
 // Library
-import { FC, useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 // Firebase/GA4 SDK
 import { initializeApp } from 'firebase/app';

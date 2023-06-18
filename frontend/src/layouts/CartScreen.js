@@ -9,7 +9,6 @@ import Message from '../components/Message/Message';
 // ACTIONS
 import { addToCart, removeFromCart } from '../actions/cartActions';
 import GA_LOGGER from '../utils/gaLoggerHelper';
-import { logEvent } from 'firebase/analytics';
 // import { logPageView } from '../utils/analytics';
 
 // ICONS
