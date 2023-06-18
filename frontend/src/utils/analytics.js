@@ -1,18 +1,23 @@
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 export const initGA = () => {
     if(process.env.NODE_ENV !== 'development') {
-        ReactGA.initialize('UA-178787777-2');
+        ReactGA.initialize('G-C8J7ZNG6HT');
     } else {
-        ReactGA.initialize('UA-178787777-2', { debug: true });
+        ReactGA.initialize('G-C8J7ZNG6HT', { debug: true });
     }
     // console.log('GA initialised');
 };
 
 export const logPageView = () => {
     // console.log(`Logging PageView for ${window.location.pathname}`);
-    ReactGA.set({ page: window.location.pathname });
-    ReactGA.pageview(window.location.pathname);
+
+    // Old react-ga
+    // ReactGA.set({ page: window.location.pathname });
+    // ReactGA.pageview(window.location.pathname);
+
+    // GA4
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname, title: `Page: ${window.location.pathname}` });
 };
 
 export const logEvent = (category = '', action = '', label = '') => {
@@ -21,8 +26,8 @@ export const logEvent = (category = '', action = '', label = '') => {
     }
 };
 
-export const logException = (description = '', fatal = false) => {
-    if (description) {
-        ReactGA.exception({ description, fatal });
-    }
-};
+// export const logException = (description = '', fatal = false) => {
+//     if (description) {
+//         ReactGA.exception({ description, fatal });
+//     }
+// };
