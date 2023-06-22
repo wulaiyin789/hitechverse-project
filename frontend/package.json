@@ -1,6 +1,6 @@
 {
   "name": "mern-ecommerce-project",
-  "proxy": "http://127.0.0.1:3001",
+  "proxy": "https://peterwu789.synology.me:33333",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
