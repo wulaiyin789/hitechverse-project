@@ -41,7 +41,7 @@ export const login = (email, password) => async (dispatch) => {
         };
 
         const { data } = await axios.post(
-            '/api/users/login',
+            `${process.env.REACT_APP_SERVER_URI}/api/users/login`,
             { email, password },
             config
         );
@@ -83,7 +83,7 @@ export const register = (name, email, password) => async (dispatch) => {
         };
 
         const { data } = await axios.post(
-            '/api/users',
+            `${process.env.REACT_APP_SERVER_URI}/api/users`,
             { name, email, password },
             config
         );
@@ -125,7 +125,7 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
             }
         };
 
-        const { data } = await axios.get(`/api/users/${id}`, config);
+        const { data } = await axios.get(`${process.env.REACT_APP_SERVER_URI}/api/users/${id}`, config);
 
         dispatch({
             type: USER_DETAILS_SUCCESS,
@@ -157,7 +157,7 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
             }
         };
 
-        const { data } = await axios.put(`/api/users/profile`, user, config);
+        const { data } = await axios.put(`${process.env.REACT_APP_SERVER_URI}/api/users/profile`, user, config);
 
         dispatch({
             type: USER_UPDATE_PROFILE_SUCCESS,
@@ -196,7 +196,7 @@ export const userListForAdmin = () => async (dispatch, getState) => {
             }
         };
 
-        const { data } = await axios.get(`/api/users`, config);
+        const { data } = await axios.get(`${process.env.REACT_APP_SERVER_URI}/api/users`, config);
 
         dispatch({
             type: USER_LIST_SUCCESS,
@@ -228,7 +228,7 @@ export const userDeleteForAdmin = (id) => async (dispatch, getState) => {
             }
         };
 
-        await axios.delete(`/api/users/${id}`, config);
+        await axios.delete(`${process.env.REACT_APP_SERVER_URI}/api/users/${id}`, config);
 
         dispatch({
             type: USER_DELETE_SUCCESS
@@ -259,7 +259,7 @@ export const userUpdateForAdmin = (id, user) => async (dispatch, getState) => {
             }
         };
 
-        const { data } = await axios.put(`/api/users/${id}`, user, config);
+        const { data } = await axios.put(`${process.env.REACT_APP_SERVER_URI}/api/users/${id}`, user, config);
 
         dispatch({
             type: USER_UPDATE_SUCCESS
