@@ -19,9 +19,9 @@ import GAWrapper from './context/GAWrapper';
 ReactDOM.render(
     <Provider store={store}>
         <Router>
-            <GAWrapper>
+//            <GAWrapper>
                 <App />
-            </GAWrapper>
+//            </GAWrapper>
         </Router>
     </Provider>,
     document.getElementById('root')
