@@ -1,88 +1,70 @@
-# eCommerce project (Hi-Techverse) built by MERN stack
+# Getting Started with Create React App
 
-Projects that are done development
-- [x] Admin Page
-    - [x] Orders List
-    - [x] Products List
-    - [x] Users List 
-    - [x] Implementation
-- [x] Cart Page
-- [x] Product Page
-- [x] Profile Page
-- [x] Order Page
-- [x] Shipping Page
-- [x] Login & Register
-- [ ] Payment Solution (Paypal || Stripe)
-    - [x] Payment reducer & action
-    - [ ] Retrieve data back to DB (FE & BE)
-    - [ ] Frontend payment action
-- [x] Reviews
-- [x] Search Product
-- [x] Pagination
-- [x] Carousel
-- [x] App deployment
-- [ ] ...
- 
-Additional Components
-- [x] Modal
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Security
-- [x] Hashed password
-- [x] Encrypted LocalStorage data
+## Available Scripts
 
-----
-## What are these small projects?
-The projects are designed to practice and explore more about the MERN stack to create an eCommerce website.
+In the project directory, you can run:
 
-You can download these projects for you to explore and change to ✨*make it your own*✨
+### `npm start`
 
-----
-## So how do I use this?
-1. Download or clone the repository ⬇️
-2. Open in an editor of your choice and play around with the projects 💛
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-----
-## Instruction
-1. Open a terminal and change to the package location
-2. Add the following variable to your environment in the root folder (.env)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-```
-NODE_ENV=xxxxxxx
-PORT=xxxxxxx
-MONGODB_API_URL=xxxxxxx
-JWT_SECRET_TOKEN=xxxxxxx
-```
+### `npm test`
 
-3. Use **yarn** or **npm** to install the node_modules
-4. **yarn start** to start your development journey!
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-----
-## Helpful resources
+### `npm run build`
 
-#### Fonts
-* [Google Fonts](https://fonts.google.com/)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-#### MongoDB
-* [MongoDB Main Page](https://www.mongodb.com/)
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-#### Express
-* [ExpressJS Main Page](https://expressjs.com/)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-#### React & Redux
-* [React Main Page](https://reactjs.org/)
-* [Redux Main Page](https://redux.js.org/)
+### `npm run eject`
 
-#### NodeJS
-* [NodeJS Main Page](https://nodejs.org/en/)
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-#### Learning More
-* [NPM](https://www.npmjs.com/)
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-----
-## Issues
-If there are some technical issue in the application, please let me know. Appreciate your contribution!
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-----
-## Created a masterpiece? 🎨 Share it!
-If so, please fork this repo and add a link to this README.md or create an issue with the github page link and to have it added to the README.md.
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
