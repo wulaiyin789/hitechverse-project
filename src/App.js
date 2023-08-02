@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
+import { initGA } from './utils/analytics';
 
 // COMPONENTS
 import Header from './components/Header/Header';
@@ -24,6 +25,8 @@ import OrderListScreen from './layouts/OrderListScreen';
 // UI
 import classes from './App.module.scss';
 import ProductEditScreen from './layouts/ProductEditScreen';
+
+initGA()
 
 const App = () => {
     return (

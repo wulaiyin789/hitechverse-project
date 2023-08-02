@@ -9,8 +9,8 @@ import CheckoutSteps from '../components/CheckoutSteps/CheckoutSteps';
 
 // ACTIONS
 import { savePaymentMethod } from '../actions/cartActions';
-import GA_LOGGER from '../utils/gaLoggerHelper';
-// import { logPageView } from '../utils/analytics';
+// import GA_LOGGER from '../utils/gaLoggerHelper';
+import { logPageView } from '../utils/analytics';
 
 const PaymentScreen = () => {
     const cart = useSelector((state) => state.cart);
@@ -20,11 +20,12 @@ const PaymentScreen = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    GA_LOGGER.event('page_view', {
-        page_title: document.title,
-        page_location: window.location.origin,
-        page_path: window.location.pathname
-    });
+    // GA_LOGGER.event('page_view', {
+    //     page_title: document.title,
+    //     page_location: window.location.origin,
+    //     page_path: window.location.pathname
+    // });
+    logPageView()
     if (!shippingAddress) {
         navigate('/shipping');
     }

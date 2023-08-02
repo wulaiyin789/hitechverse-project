@@ -8,8 +8,8 @@ import Message from '../components/Message/Message';
 
 // ACTIONS
 import { addToCart, removeFromCart } from '../actions/cartActions';
-import GA_LOGGER from '../utils/gaLoggerHelper';
-// import { logPageView } from '../utils/analytics';
+// import GA_LOGGER from '../utils/gaLoggerHelper';
+import { logPageView } from '../utils/analytics';
 
 // ICONS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -29,11 +29,12 @@ const CartScreen = () => {
         : 1;
 
     useEffect(() => {
-        GA_LOGGER.event('page_view', {
-            page_title: document.title,
-            page_location: window.location.origin,
-            page_path: window.location.pathname
-        });
+        // GA_LOGGER.event('page_view', {
+        //     page_title: document.title,
+        //     page_location: window.location.origin,
+        //     page_path: window.location.pathname
+        // });
+        logPageView()
         if (productId) {
             dispatch(addToCart(productId, qty));
         }

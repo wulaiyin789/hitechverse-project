@@ -13,8 +13,8 @@ import ProductCarousel from '../components/ProductCarousel/ProductCarousel';
 
 // ACTIONS
 import { listProducts } from '../actions/productActions';
-import GA_LOGGER from '../utils/gaLoggerHelper';
-// import { logPageView } from '../utils/analytics';
+// import GA_LOGGER from '../utils/gaLoggerHelper';
+import { logPageView } from '../utils/analytics';
 
 const HomeScreen = () => {
     const { keyword, pageNum } = useParams();
@@ -24,11 +24,12 @@ const HomeScreen = () => {
     const { loading, error, products, pages, page } = productList;
 
     useEffect(() => {
-        GA_LOGGER.event('page_view', {
-            page_title: document.title,
-            page_location: window.location.origin,
-            page_path: window.location.pathname
-        });
+        // GA_LOGGER.event('page_view', {
+        //     page_title: document.title,
+        //     page_location: window.location.origin,
+        //     page_path: window.location.pathname
+        // });
+        logPageView()
         dispatch(listProducts(keyword, pageNum));
     }, [dispatch, keyword, pageNum]);
 

@@ -17,8 +17,8 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { USER_UPDATE_PROFILE_RESET } from '../constants/userConstants';
 import { getUserDetails, updateUserProfile } from '../actions/userActions';
 import { getMyOrderList } from '../actions/orderActions';
-import GA_LOGGER from '../utils/gaLoggerHelper';
-// import { logPageView } from '../utils/analytics';
+// import GA_LOGGER from '../utils/gaLoggerHelper';
+import { logPageView } from '../utils/analytics';
 
 const ProfileScreen = () => {
     const [name, setName] = useState('');
@@ -47,11 +47,12 @@ const ProfileScreen = () => {
         : '/';
 
     useEffect(() => {
-        GA_LOGGER.event('page_view', {
-            page_title: document.title,
-            page_location: window.location.origin,
-            page_path: window.location.pathname
-        });
+        // GA_LOGGER.event('page_view', {
+        //     page_title: document.title,
+        //     page_location: window.location.origin,
+        //     page_path: window.location.pathname
+        // });
+        logPageView()
         if (!userInfo) {
             navigate('/login');
         } else {

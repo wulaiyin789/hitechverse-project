@@ -13,8 +13,8 @@ import Meta from '../components/Meta';
 // ACTIONS
 import { listProductDetails, createProductReview } from '../actions/productActions';
 import { PRODUCT_CREATE_REVIEW_RESET } from '../constants/productConstants';
-import GA_LOGGER from '../utils/gaLoggerHelper';
-// import { logPageView } from '../utils/analytics';
+// import GA_LOGGER from '../utils/gaLoggerHelper';
+import { logPageView } from '../utils/analytics';
 
 const ProductScreen = () => {
     const [qty, setQty] = useState(1);
@@ -39,11 +39,12 @@ const ProductScreen = () => {
     } = productCreateReview;
 
     useEffect(() => {
-        GA_LOGGER.event('page_view', {
-            page_title: document.title,
-            page_location: window.location.origin,
-            page_path: window.location.pathname
-        });
+        // GA_LOGGER.event('page_view', {
+        //     page_title: document.title,
+        //     page_location: window.location.origin,
+        //     page_path: window.location.pathname
+        // });
+        logPageView()
         if (successReview) {
             alert('Review submitted!');
             setRating(0);

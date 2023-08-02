@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals';
 import store from './store';
 // import { initGA } from './utils/analytics';
 
-import 'bootswatch/dist/lux/bootstrap.min.css';
+import 'bootswatch/dist/lux/bootstrap.css';
 import 'react-toastify/dist/ReactToastify.css';
 import './index.module.scss';
 import GAWrapper from './context/GAWrapper';
@@ -19,9 +19,9 @@ import GAWrapper from './context/GAWrapper';
 ReactDOM.render(
     <Provider store={store}>
         <Router>
-            {/* <GAWrapper> */}
+            <GAWrapper>
                 <App />
-            {/* </GAWrapper> */}
+            </GAWrapper>
         </Router>
     </Provider>,
     document.getElementById('root')

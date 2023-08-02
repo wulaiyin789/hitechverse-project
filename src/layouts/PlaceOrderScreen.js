@@ -9,8 +9,8 @@ import CheckoutSteps from '../components/CheckoutSteps/CheckoutSteps';
 
 // ACTIONS
 import { createOrder } from '../actions/orderActions';
-import GA_LOGGER from '../utils/gaLoggerHelper';
-// import { logPageView } from '../utils/analytics';
+// import GA_LOGGER from '../utils/gaLoggerHelper';
+import { logPageView } from '../utils/analytics';
 
 const PlaceOrderScreen = () => {
     const navigate = useNavigate();
@@ -23,11 +23,12 @@ const PlaceOrderScreen = () => {
         return (Math.round(num * 100) / 100).toFixed(2);
     };
 
-    GA_LOGGER.event('page_view', {
-        page_title: document.title,
-        page_location: window.location.origin,
-        page_path: window.location.pathname
-    });
+    // GA_LOGGER.event('page_view', {
+    //     page_title: document.title,
+    //     page_location: window.location.origin,
+    //     page_path: window.location.pathname
+    // });
+    logPageView()
     // Calculate Prices
     cart.itemsPrice = addDec(
         cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)

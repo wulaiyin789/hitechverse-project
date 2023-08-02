@@ -9,8 +9,8 @@ import CheckoutSteps from '../components/CheckoutSteps/CheckoutSteps'
 
 // ACTIONS
 import { saveShippingAddress } from '../actions/cartActions';
-import GA_LOGGER from '../utils/gaLoggerHelper';
-// import { logPageView } from '../utils/analytics';
+// import GA_LOGGER from '../utils/gaLoggerHelper';
+import { logPageView } from '../utils/analytics';
 
 const ShippingScreen = () => {
     const cart = useSelector(state => state.cart);
@@ -23,11 +23,12 @@ const ShippingScreen = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    GA_LOGGER.event('page_view', {
-        page_title: document.title,
-        page_location: window.location.origin,
-        page_path: window.location.pathname
-    });
+    // GA_LOGGER.event('page_view', {
+    //     page_title: document.title,
+    //     page_location: window.location.origin,
+    //     page_path: window.location.pathname
+    // });
+    logPageView()
     const submitHandler = (e) => {
         e.preventDefault();
         dispatch(saveShippingAddress({ address, city, postalCode, country }));
